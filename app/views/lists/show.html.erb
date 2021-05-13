@@ -1,0 +1,18 @@
+<div class="container-fluid text-center border-bottom w-100"><h1><%= @list.name %></h1></div>
+
+<div class="container d-flex">
+  <div class="row">
+    <% @list.movies.each do |movie| %>
+      <div class="card" style="width: 18rem;">
+        <%= image_tag "#{movie.poster}", alt: "Le Wagon", class:"card-img-top" %>
+        <div class="card-body">
+          <h5 class="card-title"><%= movie.title %>-<%= movie.rating %><i class="fas fa-star"></i></h5>
+          <p class="card-text"><%= movie.overview %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= link_to "Homepage", lists_path  %>
+

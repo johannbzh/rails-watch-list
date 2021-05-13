@@ -1,0 +1,10 @@
+<div class="container-fluid text-center border-bottom w-100"><h1>Create your Bookmark</h1></div>
+
+
+<div class="container">
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.input :comment %>
+    <%= f.association :movie %>
+    <%= f.submit %>
+  <% end %>
+</div>
